@@ -1,5 +1,6 @@
 # BBB-Enhancer
- Extension simple que agrega funcionalidad a Big Blue Button
+Extension simple que agrega funcionalidad a Big Blue Button
+(Si te sirve aunque sea un poco dame dineros, link en mi perfil)
 
 ## ¿Que agrega? 😱😱😱
 ✔️ Más velocidades (hasta x8!!!)
