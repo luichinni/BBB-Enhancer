@@ -2,7 +2,7 @@
  Extension simple que agrega funcionalidad a Big Blue Button
 
 ## ¿Que agrega? 😱😱😱
-✔️ Más velocidades hasta x8 !!!
+✔️ Más velocidades (hasta x8!!!)
 
 ✔️ Adelantar o retroceder (por fin)
 
