@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "BBB Enhancer",
+  "version": "1.0",
+  "description": "Agrega funcionalidades faltantes a Big Blue Button",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "icons": {
+    "16": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+        "16": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://bigbluebutton.linti.unlp.edu.ar/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
