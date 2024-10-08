@@ -17,7 +17,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://bigbluebutton.linti.unlp.edu.ar/*"],
+      "matches": ["<all_urls>"],
       "js": ["contentScript.js"]
     }
   ]
