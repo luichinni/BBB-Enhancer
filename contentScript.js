@@ -5,6 +5,14 @@ function getVideo(){
 const salto = 5;
 
 if (window.location.href.includes("bigbluebutton")){
+    document.addEventListener('visibilitychange', () =>{
+        if (!document.hidden){ 
+            // esto deberia solucionar el problema del desfase de imagen y audio
+            let video = getVideo();
+            video.currentTime = video.currentTime;
+        }
+    });
+    
     document.addEventListener('keydown', function (event) {
         console.log('Tecla presionada:', event.key);
 
