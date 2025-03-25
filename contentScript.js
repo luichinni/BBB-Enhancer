@@ -1,8 +1,36 @@
+const storageAPI = typeof browser !== "undefined" ? browser.storage : chrome.storage;
+
+let video = undefined;
+
 function getVideo(){
-    return document.querySelector('video');
+    return video === undefined ? document.querySelector('video') : video;
 }
 
-const salto = 5;
+function jump(jump, adaptable){
+    let video = getVideo();
+
+    let salto = (adaptable) ? jump * video.playbackRate : jump;
+
+    if (video.currentTime + salto < 0){
+        video.currentTime = 0;
+    }else{
+        video.currentTime += salto;
+    }
+}
+
+function change_speed(max_speed, step_size){
+    let video = getVideo();
+
+    let playRate = video.playbackRate + step_size;
+
+    if (playRate > max_speed){
+        playRate = 1;
+    }else if (playRate < 1) {
+        playRate = max_speed;
+    }
+
+    video.playbackRate = playRate;
+}
 
 if (window.location.href.includes("bigbluebutton")){
     document.addEventListener('visibilitychange', () =>{
@@ -15,11 +43,10 @@ if (window.location.href.includes("bigbluebutton")){
     
     document.addEventListener('keydown', function (event) {
         console.log('Tecla presionada:', event.key);
-
-        let video = getVideo();
-
         switch (event.key) {
             case ' ':
+                let video = getVideo();
+
                 if (video.paused) {
                     video.play();
                 } else {
@@ -27,20 +54,40 @@ if (window.location.href.includes("bigbluebutton")){
                 }
                 break;
             case 'ArrowLeft':
-                if (video.currentTime - salto < 0) {
-                    video.currentTime = 0
-                } else {
-                    video.currentTime -= salto;
-                }
+                storageAPI.local.get('jump_config')
+                .then( 
+                    (store) => {
+                        let jump_config = store.jump_config;
+                        jump(-Number(jump_config.jump), jump_config.adaptable)
+                    }
+                );
                 break;
             case 'ArrowRight':
-                video.currentTime += salto;
+                storageAPI.local.get('jump_config')
+                .then( 
+                    (store) => {
+                        let jump_config = store.jump_config;
+                        jump(Number(jump_config.jump), jump_config.adaptable);
+                    }
+                );
                 break;
             case 'ArrowUp':
-                video.playbackRate = (video.playbackRate == 8) ? 1 : video.playbackRate + 0.5;
+                storageAPI.local.get('speed_config')
+                .then(
+                    (store) => {
+                        let speed_config = store.speed_config;
+                        change_speed(Number(speed_config.max_speed), Number(speed_config.step_size));
+                    }
+                )
                 break;
             case 'ArrowDown':
-                video.playbackRate = (video.playbackRate == 1) ? 8 : video.playbackRate - 0.5;
+                storageAPI.local.get('speed_config')
+                .then(
+                    (store) => {
+                        let speed_config = store.speed_config;
+                        change_speed(Number(speed_config.max_speed), -Number(speed_config.step_size));
+                    }
+                )
                 break;
         }
     });

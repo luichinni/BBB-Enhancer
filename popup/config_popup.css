@@ -1,0 +1,66 @@
+/*
+ *   Cambiar los estilos a futuro...
+ */
+
+body {
+    min-width: 200px;
+    /* your desired width */
+    max-width: 100%;
+    position: relative;
+    vertical-align: middle;
+}
+
+/* Aplicar borde negro redondeado a cada campo */
+.field {
+    border: 2px solid black;
+    /* Borde negro */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    padding: 10px;
+    /* Espaciado interno */
+    margin-bottom: 15px;
+    /* Espaciado entre campos */
+    display: flex;
+    flex-direction: column;
+    /* Asegura que los elementos estén en columna */
+}
+
+.check-field {
+    border: 2px solid black;
+    /* Borde negro */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    padding: 10px;
+    /* Espaciado interno */
+    margin-bottom: 15px;
+    /* Espaciado entre campos */
+    display: flex;
+}
+
+/* Asegurarse de que los elementos dentro de los campos se alineen correctamente */
+.field label,
+.field input {
+    margin-bottom: 8px;
+    /* Espaciado entre el label y el input */
+}
+
+/* Estilo adicional para el botón */
+#save_btn {
+    padding: 10px 20px;
+    /* Espaciado del botón */
+    background-color: #4CAF50;
+    /* Color de fondo */
+    color: white;
+    /* Texto blanco */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar por encima */
+}
+
+#save_btn:hover {
+    background-color: #45a049;
+    /* Cambio de color al pasar el mouse */
+}

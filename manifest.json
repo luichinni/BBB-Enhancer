@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "BBB Enhancer",
-  "version": "1.1.0",
+  "version": "2.0",
   "description": "Agrega funcionalidades faltantes a Big Blue Button",
   "permissions": [
     "activeTab",
@@ -12,13 +12,17 @@
       "id": "BBB_Enhancer@luwuntech.com"
     }
   },
+  "background": {
+    "service_worker": "service_worker.js"
+  },
   "icons": {
     "16": "icon.png"
   },
   "action": {
     "default_icon": {
         "16": "icon.png"
-    }
+    },
+    "default_popup": "popup/config_popup.html"
   },
   "content_scripts": [
     {

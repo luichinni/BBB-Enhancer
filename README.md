@@ -22,7 +22,7 @@ Extension simple que agrega funcionalidad a Big Blue Button
 Ir a la tienda y descargar la extensión.
 > https://addons.mozilla.org/es/firefox/addon/bbb-enhancer/
 
-## Como instalar en Chrome
+## Como instalar en navegadores basados en Chromium
 Pasos a seguir:
 - Descargar el repo como un zip
 - Descomprimir e ir a google chrome.

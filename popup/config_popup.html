@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="config_popup.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="field">
+            <label for="jump">Segundos de avance/retroceso</label>
+            <input type="text" id="jump">
+        </div>
+        <div class="check-field">
+            <input type="checkbox" id="adaptable">
+            <label for="adaptable">Saltear segundos en base a la velocidad del video</label>
+        </div>
+        <div class="field">
+            <label for="max_speed">Velocidad máxima permitida</label>
+            <input type="text" id="max_speed">
+        </div>
+        <div class="field">
+            <label for="step_size">Tamaño del aumento en la velocidad</label>
+            <input type="text" id="step_size">
+        </div>
+        <button id="save_btn" class="save" type="button">Guardar</button>
+    </div>
+
+    <script src="config_popup.js"></script>
+</body>
+</html>
