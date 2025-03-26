@@ -21,8 +21,7 @@ Extension simple que agrega funcionalidad a Big Blue Button
 ## ¿Que hay de nuevo en la versión 2?
 ⭐ NUEVO MENU PARA CONFIGURAR LA EXTENSIÓN A GUSTO!!!
 
-![image](https://github.com/user-attachments/assets/483c6a05-4bfc-4a06-b528-9cca23462369)
-
+![image](https://github.com/user-attachments/assets/1df6a307-5f8a-4279-99bb-0c7acdec5b42)
 
 ⭐ La velocidad máxima (y de a cuanto se aumenta con las flechas) ahora se puede configurar! 
 
