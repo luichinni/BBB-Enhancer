@@ -12,9 +12,6 @@
       "id": "BBB_Enhancer@luwuntech.com"
     }
   },
-  "background": {
-    "service_worker": "service_worker.js"
-  },
   "icons": {
     "16": "icon.png"
   },
