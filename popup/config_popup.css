@@ -64,3 +64,23 @@ body {
     background-color: #45a049;
     /* Cambio de color al pasar el mouse */
 }
+
+#reset_btn {
+    padding: 10px 20px;
+    /* Espaciado del botón */
+    background-color: #af4c4c;
+    /* Color de fondo */
+    color: white;
+    /* Texto blanco */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar por encima */
+}
+
+#reset_btn:hover {
+    background-color: #a04545;
+    /* Cambio de color al pasar el mouse */
+}
