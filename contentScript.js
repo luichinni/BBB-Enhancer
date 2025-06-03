@@ -32,12 +32,42 @@ function change_speed(max_speed, step_size){
     video.playbackRate = playRate;
 }
 
+function waitForElement(selector) {
+    return new Promise(resolve => {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+
+        const observer = new MutationObserver(mutations => {
+            if (document.querySelector(selector)) {
+                observer.disconnect();
+                resolve(document.querySelector(selector));
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    });
+}
+
 if (window.location.href.includes("bigbluebutton")){
+    waitForElement(".top-content").then((elem) => {
+        elem.addEventListener('click', () => {
+            let video = getVideo();
+            video.paused ? video.play() : video.pause();
+        });
+        elem.addEventListener('dblclick', () => {
+            elem.querySelector('video').requestFullscreen();
+        })
+    });
+
     document.addEventListener('visibilitychange', () =>{
         if (!document.hidden){ 
             // esto deberia solucionar el problema del desfase de imagen y audio
             let video = getVideo();
-            video.currentTime = video.currentTime;
+            video.currentTime = video.currentTime - 1;
         }
     });
     
