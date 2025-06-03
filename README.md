@@ -17,8 +17,8 @@ Extension simple que agrega funcionalidad a Big Blue Button
 |**←** (Arrow Left)| -5 segs|
 |Espacio (Space)| Pausa/Play|
 
-## Novedades v2.1
 <a name="v2-1"></a>
+## Novedades v2.1
 Ahora además de poder usar el teclado o <ins>depender de clickear en la camara (o cuadro blanco)</ins> para pausar y reanudar, se agrega la posibilidad de:
 
 ⭐ Hacer **Click** en el video para pausar (como cualquier plataforma de videos).
