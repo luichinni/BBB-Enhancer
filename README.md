@@ -1,13 +1,12 @@
 # BBB-Enhancer
 Extension simple que agrega funcionalidad a Big Blue Button
-(Si te sirve aunque sea un poco dame dineros, link en mi perfil)
 
 ## ¿Que agrega? 😱😱😱
 ✔️ Más velocidades ~(hasta x8!!!)~ (x4 o más, es configurable!!)
 
 ✔️ Adelantar o retroceder (por fin)
 
-✔️ Pausar y reanudar con la barra espaciadora 😎
+✔️ Pausar y reanudar con la barra espaciadora o [haciendo click en el video](#v2-1) 😎
 
 ### ¿¿¿Como lo hago???
 |Tecla|Funcion por defecto|
@@ -18,7 +17,20 @@ Extension simple que agrega funcionalidad a Big Blue Button
 |**←** (Arrow Left)| -5 segs|
 |Espacio (Space)| Pausa/Play|
 
-## ¿Que hay de nuevo en la versión 2?
+## Novedades v2.1
+<a name="v2-1"></a>
+Ahora además de poder usar el teclado o <ins>depender de clickear en la camara (o cuadro blanco)</ins> para pausar y reanudar, se agrega la posibilidad de:
+
+⭐ Hacer **Click** en el video para pausar (como cualquier plataforma de videos).
+
+⭐ Hacer **Doble click** para usar pantalla completa (no solo expandir el video).
+
+> [!NOTE]
+> La pantalla completa con diapositivas también requiere que se expanda el video, sino se verá el chat.
+> 
+> La pantalla completa de una grabación toma el video y pone la pantalla completa sin el chat.
+
+## Novedades v2.0
 ⭐ NUEVO MENU PARA CONFIGURAR LA EXTENSIÓN A GUSTO!!!
 
 ![image](https://github.com/user-attachments/assets/1df6a307-5f8a-4279-99bb-0c7acdec5b42)
