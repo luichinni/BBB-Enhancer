@@ -87,7 +87,7 @@ if (window.location.href.includes("bigbluebutton")){
                 storageAPI.local.get('jump_config')
                 .then( 
                     (store) => {
-                        let jump_config = store.jump_config;
+                        let jump_config = store.jump_config ?? { jump: 5, adaptable: true };
                         jump(-Number(jump_config.jump), jump_config.adaptable)
                     }
                 );
@@ -96,7 +96,7 @@ if (window.location.href.includes("bigbluebutton")){
                 storageAPI.local.get('jump_config')
                 .then( 
                     (store) => {
-                        let jump_config = store.jump_config;
+                        let jump_config = store.jump_config ?? { jump: 5, adaptable: true };
                         jump(Number(jump_config.jump), jump_config.adaptable);
                     }
                 );
@@ -105,7 +105,7 @@ if (window.location.href.includes("bigbluebutton")){
                 storageAPI.local.get('speed_config')
                 .then(
                     (store) => {
-                        let speed_config = store.speed_config;
+                        let speed_config = store.speed_config ?? { max_speed: 4, step_size: 0.5 };
                         change_speed(Number(speed_config.max_speed), Number(speed_config.step_size));
                     }
                 )
@@ -114,7 +114,7 @@ if (window.location.href.includes("bigbluebutton")){
                 storageAPI.local.get('speed_config')
                 .then(
                     (store) => {
-                        let speed_config = store.speed_config;
+                        let speed_config = store.speed_config ?? { max_speed: 4, step_size: 0.5 };
                         change_speed(Number(speed_config.max_speed), -Number(speed_config.step_size));
                     }
                 )

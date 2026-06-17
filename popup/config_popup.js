@@ -13,27 +13,17 @@ function loadFields(){
     let campos = getElements();
     storageAPI.local.get('jump_config').then(
         (store) => {
-            let jump_config = store.jump_config;
+            let jump_config = store.jump_config ?? { jump: 5, adaptable: true };
             campos.jump.value = jump_config.jump;
             campos.adaptable.checked = jump_config.adaptable;
-        }
-    ).catch(
-        (err) => {
-            resetJumpConfig();
-            loadFields();
         }
     );
     storageAPI.local.get('speed_config').then(
         (store) => {
             console.log(store)
-            let speed_config = store.speed_config;
+            let speed_config = store.speed_config ?? { max_speed: 4, step_size: 0.5 };
             campos.max_speed.value = speed_config.max_speed;
             campos.step_size.value = speed_config.step_size;
-        }
-    ).catch(
-        (err) => {
-            resetSpeedConfig();
-            loadFields();
         }
     );
 }
